@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calculadora IRRF 2026 ♡</title>
+ <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+ <!-- FUNDO ANIMADO -->
+ <div class="bolinhas">
+   <span class="bolinha rosa"></span>
+   <span class="bolinha azul"></span>
+   <span class="bolinha roxa"></span>
+   <span class="bolinha rosa"></span>
+   <span class="bolinha azul"></span>
+   <span class="bolinha roxa"></span>
+   <span class="bolinha rosa"></span>
+ </div>
+
+ <!-- DASHBOARD -->
+ <div class="dashboard">
+
+   <!-- MENU LATERAL -->
+   <aside class="sidebar">
+     <div class="logo-dashboard">♡</div>
+     <h2>Meu Dashboard</h2>
+
+     <nav>
+       <button class="menu-item ativo" data-section="inicio">
+         📊 <span>Calculadora IRRF</span>
+       </button>
+       <button class="menu-item" data-section="tabela">
+         📋 <span>Tabela 2026</span>
+       </button>
+       <button class="menu-item" data-section="perfil">
+         👤 <span>Meu Perfil</span>
+       </button>
+     </nav>
+
+     <button class="sair" id="btnSair">
+       🚪 <span>Sair</span>
+     </button>
+   </aside>
+
+   <!-- CONTEÚDO PRINCIPAL -->
+   <main class="conteudo">
+
+     <!-- TOPO -->
+     <header class="topo">
+       <div>
+         <p>Olá, seja bem-vinda ♡</p>
+         <h1 id="tituloPagina">Projeto IRRF 2026</h1>
+       </div>
+
+       <div class="usuario">
+         <div class="avatar">🩷</div>
+         <div>
+           <strong>Usuária</strong>
+           <span>● Online</span>
+         </div>
+       </div>
+     </header>
+
+     <!-- ========================================
+          SEÇÃO 1: CALCULADORA DE IRRF
+     ======================================== -->
+     <section id="inicio" class="section ativa">
+       
+       <div class="pagina" style="max-width: 600px; text-align: left;">
+         <div class="icone-grande">💵</div>
+         <h2 style="text-align: center;">Cálculo do IRRF</h2>
+         <p style="text-align: center; margin-bottom: 25px;">Digite o seu Salário Bruto para consultar a dedução do imposto de renda.</p>
+
+         <form id="formIRRF">
+           <div class="input-grupo">
+             <label for="salarioBruto" style="display:block; margin-bottom:8px; color:#806b91; font-weight:700;">Salário Bruto (R$):</label>
+             <div class="input-box" style="display:flex; align-items:center; background:#fff; border:2px solid #ddcbed; border-radius:15px; padding:0 15px; height:50px;">
+               <span style="margin-right:10px;">💰</span>
+               <input type="number" id="salarioBruto" step="0.01" min="0" placeholder="Ex: 3000,00" required style="width:100%; border:none; outline:none; font-size:16px; color:#806b91;">
+             </div>
+           </div>
+
+           <button type="submit" class="btn-login" style="margin-top:20px;">
+             ♡ Calcular ♡
+           </button>
+         </form>
+
+         <!-- CARD COM RESULTADO -->
+         <div id="boxResultado" class="resultado-box" style="display:none; margin-top:25px; padding:20px; border-radius:18px; background:#fff5fa; border:2px solid #e7d9ef;">
+           <h3 id="statusResultado" style="color:#806b91; font-size:20px; margin-bottom:10px; text-align:center;"></h3>
+           <div id="detalhesCalculo" style="color:#a493ad; font-size:14px; line-height:1.6;"></div>
+         </div>
+       </div>
+
+       <div class="frase">
+         ♡ <span>Pequenos passos também são progresso.</span> ♡
+       </div>
+
+     </section>
+
+     <!-- ========================================
+          SEÇÃO 2: TABELA INFORMATIVA
+     ======================================== -->
+     <section id="tabela" class="section">
+       <div class="pagina" style="max-width: 700px;">
+         <div class="icone-grande">📊</div>
+         <h2>Tabela de Incidência Mensal</h2>
+         <p>IRRF 2026</p>
+
+         <div style="overflow-x:auto; margin-top:25px;">
+           <table style="width:100%; border-collapse:collapse; text-align:left; background:#fff; border-radius:15px; overflow:hidden; border:1px solid #ddcbed;">
+             <thead>
+               <tr style="background:#f8effd; color:#8e6fba;">
+                 <th style="padding:12px 15px;">Base de cálculo</th>
+                 <th style="padding:12px 15px;">Alíquota</th>
+                 <th style="padding:12px 15px;">Dedução</th>
+               </tr>
+             </thead>
+             <tbody style="color:#806b91; font-size:14px;">
+               <tr style="border-bottom:1px solid #eee6f3;">
+                 <td style="padding:12px 15px;">Até R$ 2.428,80</td>
+                 <td style="padding:12px 15px;">-</td>
+                 <td style="padding:12px 15px;">-</td>
+               </tr>
+               <tr style="border-bottom:1px solid #eee6f3;">
+                 <td style="padding:12px 15px;">De R$ 2.428,81 até R$ 2.826,65</td>
+                 <td style="padding:12px 15px;">7,5%</td>
+                 <td style="padding:12px 15px;">R$ 182,16</td>
+               </tr>
+               <tr style="border-bottom:1px solid #eee6f3;">
+                 <td style="padding:12px 15px;">De R$ 2.826,66 até R$ 3.751,05</td>
+                 <td style="padding:12px 15px;">15,0%</td>
+                 <td style="padding:12px 15px;">R$ 394,16</td>
+               </tr>
+               <tr style="border-bottom:1px solid #eee6f3;">
+                 <td style="padding:12px 15px;">De R$ 3.751,06 até R$ 4.664,68</td>
+                 <td style="padding:12px 15px;">22,5%</td>
+                 <td style="padding:12px 15px;">R$ 675,49</td>
+               </tr>
+               <tr>
+                 <td style="padding:12px 15px;">Acima de R$ 4.664,68</td>
+                 <td style="padding:12px 15px;">27,5%</td>
+                 <td style="padding:12px 15px;">R$ 908,73</td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </section>
+
+     <!-- ========================================
+          SEÇÃO 3: PERFIL
+     ======================================== -->
+     <section id="perfil" class="section">
+       <div class="pagina">
+         <div class="icone-grande">🩷</div>
+         <h2>Meu Perfil ♡</h2>
+         <p>Aqui estão suas informações.</p>
+
+         <div class="dados">
+           <div>
+             <span>Nome</span>
+             <strong>Usuária</strong>
+           </div>
+           <div>
+             <span>Status</span>
+             <strong class="verde">● Online</strong>
+           </div>
+           <div>
+             <span>Membro desde</span>
+             <strong>2026</strong>
+           </div>
+         </div>
+       </div>
+     </section>
+
+   </main>
+
+ </div>
+
+ <script src="dashboard.js"></script>
+
+</body>
+
+</html>
